@@ -5,7 +5,7 @@ const ContactCard = () => {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText('clumpstar@gmail.com');
+    navigator.clipboard.writeText('your@email.com');
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
@@ -13,7 +13,7 @@ const ContactCard = () => {
   };
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:clumpstar@gmail.com';
+    window.location.href = 'mailto:your@email.com';
   };
 
   return (
@@ -22,10 +22,10 @@ const ContactCard = () => {
         <HiOutlineMail size={48} className="text-white" />
       </div>
       <div className="text-center mt-4">
-        <p className="font-semibold text-2xl text-white">Let's Get in Touch! 👋</p>
+        <p className="font-semibold text-2xl text-white">Let&apos;s Get in Touch! 👋</p>
       </div>
       <div className="text-center mt-4">
-        <p className="text-gray-100">
+        <p className="text-gray-300">
           Feel free to reach out to me via email:
         </p>
         <div className="flex items-center justify-center mt-2">
@@ -34,7 +34,7 @@ const ContactCard = () => {
             onClick={handleEmailClick}
             className="text-white hover:text-blue-500 cursor-pointer font-medium"
           >
-            clumpstar@gmail.com
+            your@email.com
           </a>
           <button
             onClick={handleCopy}
@@ -42,7 +42,7 @@ const ContactCard = () => {
               isCopied ? 'text-green-500' : 'text-white hover:text-blue-500'
             }`}
           >
-            <HiOutlineClipboard size={25} />
+            <HiOutlineClipboard size={18} />
           </button>
         </div>
       </div>
