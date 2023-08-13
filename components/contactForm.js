@@ -26,7 +26,7 @@ const ContactCard = () => {
         <HiOutlineMail size={48} className="text-white" />
       </div>
       <div className="text-center mt-4">
-        <p className="font-semibold text-2xl text-white">Let's Get in Touch! 👋</p>
+        <p className="font-semibold text-2xl text-white">Let&apos;s Get in Touch! 👋</p>
       </div>
       <form className="mt-4" onSubmit={handleSubmit}>
         <div className="flex flex-col items-center">
