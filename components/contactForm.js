@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
-import { HiOutlineMail, HiOutlineClipboard } from 'react-icons/hi';
+import { HiOutlineMail, HiOutlinePhone, HiOutlinePencil, HiOutlineDocumentText } from 'react-icons/hi';
 
 const ContactCard = () => {
-  const [isCopied, setIsCopied] = useState(false);
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText('your@email.com');
-    setIsCopied(true);
-    setTimeout(() => {
-      setIsCopied(false);
-    }, 2000);
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const handleEmailClick = () => {
-    window.location.href = 'mailto:clumpstar@gmail.com';
+    // Send the form data to your backend service here
+    // Include the fullName, email, phoneNumber, and message in the request
+
+    // Clear form fields
+    setFullName('');
+    setEmail('');
+    setPhoneNumber('');
+    setMessage('');
   };
 
   return (
@@ -22,30 +26,62 @@ const ContactCard = () => {
         <HiOutlineMail size={48} className="text-white" />
       </div>
       <div className="text-center mt-4">
-        <p className="font-semibold text-xl text-white">Let&apos;s Get in Touch! 👋</p>
+        <p className="font-semibold text-2xl text-white">Let's Get in Touch! 👋</p>
       </div>
-      <div className="text-center mt-4">
-        <p className="text-gray-300">
-          Feel free to reach out to me via email:
-        </p>
-        <div className="flex items-center justify-center mt-2">
-          <a
-            href="#"
-            onClick={handleEmailClick}
-            className="text-white hover:text-blue-500 cursor-pointer font-medium"
-          >
-            clumpstar@gmail.com
-          </a>
+      <form className="mt-4" onSubmit={handleSubmit}>
+        <div className="flex flex-col items-center">
+          <div className="flex items-center bg-gray-100 rounded-full p-2 focus-within:ring-2 focus-within:ring-blue-300 mb-2">
+            <HiOutlineDocumentText className="text-gray-500 mr-2" />
+            <input
+              type="text"
+              placeholder="Full Name"
+              className="bg-transparent p-1 pl-2 focus:outline-none rounded-full"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
+              required
+            />
+          </div>
+          <div className="flex items-center bg-gray-100 rounded-full p-2 focus-within:ring-2 focus-within:ring-blue-300 mb-2">
+            <HiOutlineMail className="text-gray-500 mr-2" />
+            <input
+              type="email"
+              placeholder="Email"
+              className="bg-transparent p-1 pl-2 focus:outline-none rounded-full"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="flex items-center bg-gray-100 rounded-full p-2 focus-within:ring-2 focus-within:ring-blue-300 mb-2">
+            <HiOutlinePhone className="text-gray-500 mr-2" />
+            <input
+              type="tel"
+              placeholder="Phone Number"
+              className="bg-transparent p-1 pl-2 focus:outline-none rounded-full"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+            />
+          </div>
+          <div className="flex items-center bg-gray-100 rounded p-2 focus-within:ring-2 focus-within:ring-blue-300 mb-2">
+            <HiOutlinePencil className="text-gray-500 mr-2" />
+            <textarea
+              placeholder="Message"
+              className="bg-transparent p-1 pl-2 focus:outline-none rounded-lg h-20"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+            />
+          </div>
+        </div>
+        <div className="text-center mt-4">
           <button
-            onClick={handleCopy}
-            className={`ml-2 cursor-pointer ${
-              isCopied ? 'text-green-500' : 'text-white hover:text-blue-500'
-            }`}
+            type="submit"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded cursor-pointer"
           >
-            <HiOutlineClipboard size={18} />
+            Send Message
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

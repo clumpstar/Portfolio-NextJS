@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { useState } from "react";
+import Background from "../components/background";
 import Navbar from "../components/navbar";
 import Hero from "../components/heroSection";
 import Card from "../components/cards";
@@ -29,7 +30,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-white px-10 md:px-20 lg:px-52 dark:bg-gray-800">
+      <div>
+
+        <main className="bg-white px-10 md:px-20 lg:px-52 dark:bg-gray-800">
+
         <div className="min-h-screen">
 
           <Navbar />
@@ -83,13 +87,14 @@ export default function Home() {
 
           </section>
 
-          <section id="Contact" className="mt-20">
+          <section id="Contact" className="mt-24">
             <Contact />
           </section>
 
           <div className="dark:bg-gray-800 h-16" />
         </div>
       </main>
+      </div>
     </div>
   );
 }

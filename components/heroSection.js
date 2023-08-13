@@ -4,6 +4,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { AiFillLinkedin, AiFillInstagram, AiFillGithub } from "react-icons/ai";
 import Image from "next/image";
 import deved from "../public/dev-ed-wave.png";
+import Background from "../components/background";
 
 const HeroSection = () => {
   const [text, count] = useTypewriter({
@@ -37,10 +38,17 @@ const HeroSection = () => {
             <Cursor cursorColor="#fcab0a" />
           </h3>
           <div className="flex justify-center px-10 cursor-pointer gap-10 mt-10 text-gray-600 md:gap-16 dark:text-gray-500 mx-auto">
-            <AiFillLinkedin className="text-3xl lg:text-4xl"/>
-            <AiFillInstagram className="text-3xl lg:text-4xl"/>
-            <AiFillGithub className="text-3xl lg:text-4xl"/>
+            <a href="https://www.linkedin.com/your-profile-url" target="_blank" rel="noopener noreferrer">
+              <AiFillLinkedin className="text-3xl lg:text-4xl"/>
+            </a>
+            <a href="https://www.instagram.com/your-profile-url" target="_blank" rel="noopener noreferrer">
+              <AiFillInstagram className="text-3xl lg:text-4xl"/>
+            </a>
+            <a href="https://github.com/clumpstar" target="_blank" rel="noopener noreferrer">
+              <AiFillGithub className="text-3xl lg:text-4xl"/>
+            </a>
           </div>
+
         </div>
       </motion.div>
 
