@@ -31,21 +31,15 @@ const HeroSection = () => {
           duration: 1.5,
         }}
       >
-        <div className="text-center p-10">
-          <h3 className="font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-black to-gray-500 leading-7 py-4 md:text-7xl max-w-7xl mx-auto px-auto inline-block dark:text-white">
+        <div className="text-center p-5 lg:p-10">
+          <h3 className="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-black to-gray-500 leading-7 py-4 md:text-5xl max-w-3xl mx-auto px-auto inline-block dark:text-white">
             <span>{text}</span>
             <Cursor cursorColor="#fcab0a" />
           </h3>
-          <div className="text-5xl flex justify-center px-10 cursor-pointer gap-16 mt-10 text-gray-600 md:gap-16 dark:text-gray-500 mx-auto">
-            <a
-              href="www.linkedin.com/in/hari-ganesh-2557b6228"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <AiFillLinkedin />
-            </a>
-            <AiFillInstagram />
-            <AiFillGithub />
+          <div className="flex justify-center px-10 cursor-pointer gap-10 mt-10 text-gray-600 md:gap-16 dark:text-gray-500 mx-auto">
+            <AiFillLinkedin className="text-3xl lg:text-4xl"/>
+            <AiFillInstagram className="text-3xl lg:text-4xl"/>
+            <AiFillGithub className="text-3xl lg:text-4xl"/>
           </div>
         </div>
       </motion.div>

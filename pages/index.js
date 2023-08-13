@@ -39,7 +39,7 @@ export default function Home() {
           </section>
 
           <section id="Projects" className="mt-20">
-            <h1 className="text-5xl font-black text-center bg-gradient-to-r from-purple-300 to-gray-500 leading-7 bg-clip-text text-transparent py-8 lg:text-7xl">
+            <h1 className="text-4xl font-black text-center bg-gradient-to-r from-purple-300 to-gray-500 leading-7 bg-clip-text text-transparent py-8 lg:text-6xl">
               Projects
             </h1>
 
@@ -50,21 +50,25 @@ export default function Home() {
               githubLink='https://github.com/clumpstar/Password-Manager.git'
             />
             <Card
+              imageUrl='https://cdn-icons-png.flaticon.com/512/7631/7631097.png'
               title='Password Manager'
               githubLink='https://github.com/clumpstar/Password-Manager.git'
             />
-            <Card 
-            title='Password Manager'
-            githubLink='https://github.com/clumpstar/Password-Manager.git'
+            <Card
+              imageUrl='https://cdn-icons-png.flaticon.com/512/7631/7631097.png'
+              title='Password Manager'
+              githubLink='https://github.com/clumpstar/Password-Manager.git'
             />
-            <Card title='Password Manager'
-            githubLink='https://github.com/clumpstar/Password-Manager.git'
+            <Card
+              imageUrl='https://cdn-icons-png.flaticon.com/512/7631/7631097.png'
+              title='Password Manager'
+              githubLink='https://github.com/clumpstar/Password-Manager.git'
             />
             </div>
           </section>
 
           <section id="Skills" className="mt-20">
-            <h1 className="text-5xl font-black text-center bg-gradient-to-r from-purple-300 to-gray-500 leading-7 bg-clip-text text-transparent py-8 lg:text-7xl">
+            <h1 className="text-4xl font-black text-center bg-gradient-to-r from-purple-300 to-gray-500 leading-7 bg-clip-text text-transparent py-8 lg:text-6xl">
               Skills
             </h1>
 

@@ -41,7 +41,7 @@ const Navbar = () => {
           duration: 1.5,
         }}
       >
-        <h1 className="font-extrabold text-transparent text-3xl bg-clip-text bg-gradient-to-r from-black to-gray-500 font-burtons lg:text-4xl dark:text-white">
+        <h1 className="font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-black to-gray-500 font-burtons lg:text-4xl dark:text-white">
           Zerofy<b>.Dev</b>
         </h1>
       </motion.div>
@@ -62,7 +62,7 @@ const Navbar = () => {
         }}
       >
         {/* Hamburger menu for mobile */}
-        <div className="lg:hidden relative z-10">
+        <div className="lg:hidden relative z-10 top-1">
           <button
             onClick={toggleMenu}
             className="text-gray-600 hover:text-gray-900 focus:outline-none"
@@ -83,7 +83,7 @@ const Navbar = () => {
           </button>
           {/* Transparent card-like menu for mobile */}
           {isOpen && (
-            <div className="absolute top-10 -left-20 w-full bg-white rounded-lg py-6 pr-28 pl-16 shadow-md z-20 font-semibold text-lg">
+            <div className="absolute top-10 -left-20 w-full bg-white rounded-lg py-6 pr-28 pl-16 shadow-md z-20 font-semibold text-sm">
               <ul className="space-y-2">
                 <li>
                   <Link
@@ -146,7 +146,7 @@ const Navbar = () => {
           )}
         </div>
         {/* Navigation links for large screens */}
-        <ul className="hidden lg:flex items-center space-x-6 mt-4 lg:mt-0">
+        <ul className="hidden lg:flex items-center space-x-6 mt-4 lg:mt-2">
           <li>
             <Link
               activeClass="active"
@@ -218,7 +218,7 @@ const Navbar = () => {
         }}
       >
         <a
-          className="bg-black text-white py-2 px-4 rounded-md ml-8 font-bold dark:bg-white dark:text-black"
+          className="bg-black text-white py-2 px-2 rounded-md ml-8 font-bold dark:bg-white dark:text-black"
           href="#"
         >
           Resume

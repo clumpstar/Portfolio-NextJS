@@ -13,7 +13,7 @@ const ContactCard = () => {
   };
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:your@email.com';
+    window.location.href = 'mailto:clumpstar@gmail.com';
   };
 
   return (
@@ -22,7 +22,7 @@ const ContactCard = () => {
         <HiOutlineMail size={48} className="text-white" />
       </div>
       <div className="text-center mt-4">
-        <p className="font-semibold text-2xl text-white">Let&apos;s Get in Touch! 👋</p>
+        <p className="font-semibold text-xl text-white">Let&apos;s Get in Touch! 👋</p>
       </div>
       <div className="text-center mt-4">
         <p className="text-gray-300">
@@ -34,7 +34,7 @@ const ContactCard = () => {
             onClick={handleEmailClick}
             className="text-white hover:text-blue-500 cursor-pointer font-medium"
           >
-            your@email.com
+            clumpstar@gmail.com
           </a>
           <button
             onClick={handleCopy}
