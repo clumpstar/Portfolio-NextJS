@@ -9,6 +9,14 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleDownloadClick = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = '/Resume.pdf'; // Change this to the actual file path
+    link.download = 'Resume.pdf'; // Change this to the desired file name
+    link.click();
+  };
+
   useEffect(() => {
     // Add scroll event listener to close the menu when scrolling
     const handleScroll = () => {
@@ -218,8 +226,8 @@ const Navbar = () => {
         }}
       >
         <a
-          className="bg-black text-white py-2 px-2 rounded-md ml-8 font-bold dark:bg-white dark:text-black"
-          href="#"
+          className="bg-black text-white py-2 px-2 rounded-md ml-8 font-bold dark:bg-white dark:text-black cursor-pointer"
+          onClick={handleDownloadClick}
         >
           Resume
         </a>

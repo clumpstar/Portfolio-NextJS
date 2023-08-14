@@ -6,9 +6,30 @@ const ContactCard = () => {
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
+  const [phonePrefix, setPhonePrefix] = useState('+1'); // Default to US prefix
+
+  const handlePhonePrefixChange = (event) => {
+    setPhonePrefix(event.target.value);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate email with regex
+    const emailRegex = /^[^\s@]+@(gmail\.com|yahoo\.com|outlook\.com|hotmail\.com|live\.com)$/;
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address with domains like Gmail, Yahoo, Outlook, Hotmail, or Live');
+      return;
+    }
+
+    // Validate phone numbers with regex
+    // const usPhoneRegex = /^\+1\d{10}$/;
+    // const indianPhoneRegex = /^\+91\d{10}$/;
+
+    // if (!(usPhoneRegex.test(phoneNumber) || indianPhoneRegex.test(phoneNumber))) {
+    //   alert('Please enter a valid phone number');
+    //   return;
+    // }
 
     // Send the form data to your backend service here
     // Include the fullName, email, phoneNumber, and message in the request
@@ -53,13 +74,25 @@ const ContactCard = () => {
             />
           </div>
           <div className="flex items-center bg-gray-100 rounded-full p-2 focus-within:ring-2 focus-within:ring-blue-300 mb-2">
-            <HiOutlinePhone className="text-gray-500 mr-2" />
+            {/* Phone prefix dropdown */}
+            <select
+              value={phonePrefix}
+              onChange={handlePhonePrefixChange}
+              className="bg-transparent border-none pr-1 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-l-full"
+            >
+              <option value="+1">🇺🇸</option>
+              <option value="+91">🇮🇳</option>
+            </select>
+            {/* Phone input */}
+            {/* <HiOutlinePhone className="text-gray-500 mx-2" /> */}
             <input
               type="tel"
               placeholder="Phone Number"
-              className="bg-transparent p-1 pl-2 focus:outline-none rounded-full"
+              className="bg-transparent p-1 pl-2 focus:outline-none rounded-r-full"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
+              pattern="\d{10}" // Pattern to restrict to 10 digits
+              required
             />
           </div>
           <div className="flex items-center bg-gray-100 rounded p-2 focus-within:ring-2 focus-within:ring-blue-300 mb-2">

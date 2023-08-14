@@ -41,7 +41,7 @@ const HeroSection = () => {
             <a href="https://www.linkedin.com/your-profile-url" target="_blank" rel="noopener noreferrer">
               <AiFillLinkedin className="text-3xl lg:text-4xl"/>
             </a>
-            <a href="https://www.instagram.com/your-profile-url" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/hri_31_/" target="_blank" rel="noopener noreferrer">
               <AiFillInstagram className="text-3xl lg:text-4xl"/>
             </a>
             <a href="https://github.com/clumpstar" target="_blank" rel="noopener noreferrer">
